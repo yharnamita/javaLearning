@@ -2,7 +2,7 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class exercicio1 {
+public class Exercicio1 {
 
 	public static void main(String[] args) {
 		
@@ -12,16 +12,16 @@ public class exercicio1 {
 		int menu =-1;
 		
 		while (menu!=0) {
-			System.out.println("=== ESCOLHA A OPERA«√O");
+			System.out.println("=== ESCOLHA A OPERA√á√ÉO");
 			System.out.println("1 - Random info");
-			System.out.println("2 - ¡rea do Terreno");
+			System.out.println("2 - √Årea do Terreno");
 	        System.out.println("3 - Soma de Dois Valores");
-	        System.out.println("4 - ¡rea do CÌrculo");
-	        System.out.println("5 - DiferenÁa");
-	        System.out.println("6 - Funcion·rio");
-	        System.out.println("7 - PeÁas (POO)");
+	        System.out.println("4 - √Årea do C√≠rculo");
+	        System.out.println("5 - Diferen√ßa");
+	        System.out.println("6 - Funcion√°rio");
+	        System.out.println("7 - Pe√ßas (POO)");
 	        System.out.println("0 - Sair");
-	        System.out.print("OpÁ„o: ");
+	        System.out.print("Op√ß√£o: ");
 	    
 	        try {
 	        	menu = sc.nextInt();
@@ -35,10 +35,10 @@ public class exercicio1 {
 	   	        case 6: funcionario(sc); break;
 	   	        case 7: pecas(sc); break;
 	   	        case 0: System.out.println("\n=== ENCERRAMOS AQUI, TENHA UM BOM DIA ==="); break;
-	   	        default: System.out.println("\n=== OP«√O INV¡LIDA ===");
+	   	        default: System.out.println("\n=== OP√á√ÉO INV√ÅLIDA ===");
 	   	        }
 	        } catch(Exception e) {
-	        	System.out.println("\n===DIGITE APENAS N⁄MEROS===");
+	        	System.out.println("\n===DIGITE APENAS N√öMEROS===");
 	        	sc.next();
 	        }
 	        
@@ -46,33 +46,33 @@ public class exercicio1 {
 		sc.close();
 	}
 	
-	//mÈtodo try/catch para ler n˙meros int
+	//m√©todo try/catch para ler n√∫meros int
 		static int lerIntSeguro(Scanner sc, String mensagem) {
 			while (true) {
 				System.out.print(mensagem);
 				try {
 					return sc.nextInt();	
 				} catch (Exception e) {
-					System.out.println("===APENAS N⁄MEROS===");
+					System.out.println("===APENAS N√öMEROS===");
 					sc.next();
 				}
 			}
 		}
 		
-		//mÈtodo try/catch para ler n˙meros double
+		//m√©todo try/catch para ler n√∫meros double
 		static double lerDoubleSeguro(Scanner sc, String mensagem) {
 			while (true) {
 				System.out.print(mensagem);
 				try {
 					return sc.nextDouble();	
 				} catch (Exception e) {
-					System.out.println("===APENAS N⁄MEROS===");
+					System.out.println("===APENAS N√öMEROS===");
 					sc.next();
 				}
 			}
 		}
 		
-		//random info - declaraÁ„o de variaveis
+		//random info - declara√ß√£o de variaveis
 		
 				static void info() {
 				String product1 = "Computer";
@@ -135,11 +135,11 @@ public class exercicio1 {
 		System.out.printf("Area do circulo: %.4f%n%n", areacirc);
 		}
 		
-		//DiferenÁa;
+		//Diferen√ßa;
 		
 		static void diferenca(Scanner sc) {
 			
-		System.out.printf("A diferenÁa È igual a A x B - C x D%n%n");
+		System.out.printf("A diferen√ßa √© igual a A x B - C x D%n%n");
 	
 		int A = lerIntSeguro(sc, "Digite A: ");
 		int B = lerIntSeguro(sc, "Digite B: ");
@@ -152,42 +152,42 @@ public class exercicio1 {
 		
 		}
 		
-		//Funcion·rio;
+		//Funcion√°rio;
 		static void funcionario(Scanner sc) {
 		
-		int numero = lerIntSeguro(sc, "Digite o numero de identificaÁ„o do funcionario: ");
+		int numero = lerIntSeguro(sc, "Digite o numero de identifica√ß√£o do funcionario: ");
 		double horas = lerDoubleSeguro(sc, "Digite as horas de trabalho: ");
 		double minimo = lerDoubleSeguro(sc, "Digite o salario por hora: ");
 		double salar = minimo * horas;
 		
-		System.out.printf("O funcion·rio de NUMBER = %d%n Recebe SALARY de = U$%.2f%n%n", numero, salar);	
+		System.out.printf("O funcion√°rio de NUMBER = %d%n Recebe SALARY de = U$%.2f%n%n", numero, salar);	
 		}
 		
-		//PeÁas - POO;
+		//Pe√ßas - POO;
 		
 		static void pecas(Scanner sc) {
 		Peca peca1 = new Peca();
 		Peca peca2 = new Peca();
 		
-		System.out.println("===Digite as caracteristicas da peÁa 1===%n");
-		peca1.codigo = lerIntSeguro(sc, "Numero de IdentificaÁ„o: ");
+		System.out.println("===Digite as caracteristicas da pe√ßa 1===%n");
+		peca1.codigo = lerIntSeguro(sc, "Numero de Identifica√ß√£o: ");
 		peca1.quantidade = lerIntSeguro(sc,"Quantidade solicitada: ");
-		peca1.valorUnitario = lerDoubleSeguro(sc, "Valor Unit·rio da PeÁa: ");
+		peca1.valorUnitario = lerDoubleSeguro(sc, "Valor Unit√°rio da Pe√ßa: ");
 		
 		String resp;
 		do {
 		
-		System.out.println("Deseja adcionar uma segunda peÁa? (S/N): ");
+		System.out.println("Deseja adcionar uma segunda pe√ßa? (S/N): ");
 		resp = sc.next().toUpperCase();
 		
 		} while (!resp.equals("S") && !resp.equals("N"));
 		
 		if (resp.equals("S")) {
 			
-		System.out.println("===Digite as caracteristicas da peÁa 2===%n");
-		peca2.codigo = lerIntSeguro(sc, "Numero de IdentificaÁ„o: ");
+		System.out.println("===Digite as caracteristicas da pe√ßa 2===%n");
+		peca2.codigo = lerIntSeguro(sc, "Numero de Identifica√ß√£o: ");
 		peca2.quantidade = lerIntSeguro(sc,"Quantidade solicitada: ");
-		peca2.valorUnitario = lerDoubleSeguro(sc, "Valor Unit·rio da PeÁa: ");
+		peca2.valorUnitario = lerDoubleSeguro(sc, "Valor Unit√°rio da Pe√ßa: ");
 		
 		} else {
 			peca2.quantidade = 0;
