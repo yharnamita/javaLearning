@@ -8,6 +8,8 @@ public class Exercicio2 {
 	Locale.setDefault(Locale.US);
 	Scanner sc = new Scanner(System.in);
 	
+	//menu
+	
 	int menu =-1;
 	while (menu !=0) {
 		 System.out.println("\n=== ESCOLHA A OPERAÇÃO ===");

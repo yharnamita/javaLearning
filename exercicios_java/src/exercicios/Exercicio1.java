@@ -14,9 +14,9 @@ public class Exercicio1 {
 		while (menu!=0) {
 			System.out.println("=== ESCOLHA A OPERAÇÃO");
 			System.out.println("1 - Random info");
-			System.out.println("2 - Área do Terreno");
+			System.out.println("2 - �?rea do Terreno");
 	        System.out.println("3 - Soma de Dois Valores");
-	        System.out.println("4 - Área do Círculo");
+	        System.out.println("4 - �?rea do Círculo");
 	        System.out.println("5 - Diferença");
 	        System.out.println("6 - Funcionário");
 	        System.out.println("7 - Peças (POO)");
@@ -35,7 +35,7 @@ public class Exercicio1 {
 	   	        case 6: funcionario(sc); break;
 	   	        case 7: pecas(sc); break;
 	   	        case 0: System.out.println("\n=== ENCERRAMOS AQUI, TENHA UM BOM DIA ==="); break;
-	   	        default: System.out.println("\n=== OPÇÃO INVÁLIDA ===");
+	   	        default: System.out.println("\n=== OPÇÃO INV�?LIDA ===");
 	   	        }
 	        } catch(Exception e) {
 	        	System.out.println("\n===DIGITE APENAS NÚMEROS===");
