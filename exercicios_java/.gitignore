@@ -1,0 +1,11 @@
+# Eclipse
+.settings/
+.classpath
+.project
+
+# Compilados
+bin/
+*.class
+
+# Outros
+.DS_Store
