@@ -1,14 +1,17 @@
 package exercicios;
 import java.util.Scanner;
 
+
 //Esse exercicio gera um menu onde o usuario pode cadastrar uma senha de acesso e testar se ela funcionou
+
 
 public class Exercicio4{
 
-	static Integer senha = null;
+	static Integer senha = null; //variavel senha
 	
 	public static void main(String[] args) {
 		
+		//menu
 		Scanner sc = new Scanner(System.in);
 		int menu =-1;
 		while (menu !=0) {
@@ -38,39 +41,41 @@ public class Exercicio4{
 	}
 
 	//método try/catch para ler números int
-	static int lerIntSeguro(Scanner sc, String mensagem) {
+		static int lerIntSeguro(Scanner sc, String mensagem) {
 		while (true) {
 			System.out.print(mensagem);
 			try {
 				return sc.nextInt();	
 			} catch (Exception e) {
-				System.out.println("===APENAS NÚMEROS===");
+				System.out.println("\n=== DIGITE APENAS NÚMEROS ===");
 				sc.next();
 			}
 		}
 	}
 	
+			//Cadastro de senha
 			static void cadastrarSenha(Scanner sc) {
 				
-			senha = lerIntSeguro(sc, "Cadastre uma Senha numérica: ");
-			System.out.println("===Senha Cadastrada com sucesso===");
+			senha = lerIntSeguro(sc, "\nCadastre uma Senha numérica: ");
+			System.out.println("\n=== SENHA CADASTRADA COM SUCESSO ===");
 				
 			}
 			
+			//verificação da senha
 			static void verificarSenha(Scanner sc) {
 				
 			if (senha == null) {
-				System.out.println("===Você não cadastrou uma senha===");
+				System.out.println("\n=== VOCÊ NÃO CADASTROU UMA SENHA ===");
 				return;
 			}
 			
-			int acesso = lerIntSeguro(sc, "Digite a sua senha: ");
+			int acesso = lerIntSeguro(sc, "\nDigite a sua senha: ");
 			
 			if (acesso == senha) {
-				System.out.println("===ACESSO PERMITIDO===");
+				System.out.println("\n=== ACESSO PERMITIDO ===");
 				
 			} else {
-				System.out.println("===SENHA INCORRETA===");
+				System.out.println("\n=== SENHA INCORRETA ===");
 			}
 			
 			

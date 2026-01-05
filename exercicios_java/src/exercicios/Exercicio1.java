@@ -35,10 +35,10 @@ public class Exercicio1 {
 	   	        case 6: funcionario(sc); break;
 	   	        case 7: pecas(sc); break;
 	   	        case 0: System.out.println("\n=== ENCERRAMOS AQUI, TENHA UM BOM DIA ==="); break;
-	   	        default: System.out.println("\n=== OPÇÃO INV�?LIDA ===");
+	   	        default: System.out.println("\n=== OPCAO INVALIDA ===");
 	   	        }
 	        } catch(Exception e) {
-	        	System.out.println("\n===DIGITE APENAS NÚMEROS===");
+	        	System.out.println("\n===DIGITE APENAS NUMEROS===");
 	        	sc.next();
 	        }
 	        
@@ -53,7 +53,7 @@ public class Exercicio1 {
 				try {
 					return sc.nextInt();	
 				} catch (Exception e) {
-					System.out.println("===APENAS NÚMEROS===");
+					System.out.println("===APENAS NUMEROS===");
 					sc.next();
 				}
 			}
@@ -66,7 +66,7 @@ public class Exercicio1 {
 				try {
 					return sc.nextDouble();	
 				} catch (Exception e) {
-					System.out.println("===APENAS NÚMEROS===");
+					System.out.println("===APENAS NUMEROS===");
 					sc.next();
 				}
 			}
@@ -155,12 +155,12 @@ public class Exercicio1 {
 		//Funcionário;
 		static void funcionario(Scanner sc) {
 		
-		int numero = lerIntSeguro(sc, "Digite o numero de identificação do funcionario: ");
+		int numero = lerIntSeguro(sc, "Digite o numero de identificacaoo do funcionario: ");
 		double horas = lerDoubleSeguro(sc, "Digite as horas de trabalho: ");
 		double minimo = lerDoubleSeguro(sc, "Digite o salario por hora: ");
 		double salar = minimo * horas;
 		
-		System.out.printf("O funcionário de NUMBER = %d%n Recebe SALARY de = U$%.2f%n%n", numero, salar);	
+		System.out.printf("O funcionario de NUMBER = %d%n Recebe SALARY de = U$%.2f%n%n", numero, salar);	
 		}
 		
 		//Peças - POO;
@@ -169,25 +169,25 @@ public class Exercicio1 {
 		Peca peca1 = new Peca();
 		Peca peca2 = new Peca();
 		
-		System.out.println("===Digite as caracteristicas da peça 1===%n");
-		peca1.codigo = lerIntSeguro(sc, "Numero de Identificação: ");
+		System.out.println("===Digite as caracteristicas da peca 1===%n");
+		peca1.codigo = lerIntSeguro(sc, "Numero de Identificacao: ");
 		peca1.quantidade = lerIntSeguro(sc,"Quantidade solicitada: ");
-		peca1.valorUnitario = lerDoubleSeguro(sc, "Valor Unitário da Peça: ");
+		peca1.valorUnitario = lerDoubleSeguro(sc, "Valor Unitario da Peça: ");
 		
 		String resp;
 		do {
 		
-		System.out.println("Deseja adcionar uma segunda peça? (S/N): ");
+		System.out.println("Deseja adcionar uma segunda peca? (S/N): ");
 		resp = sc.next().toUpperCase();
 		
 		} while (!resp.equals("S") && !resp.equals("N"));
 		
 		if (resp.equals("S")) {
 			
-		System.out.println("===Digite as caracteristicas da peça 2===%n");
-		peca2.codigo = lerIntSeguro(sc, "Numero de Identificação: ");
+		System.out.println("===Digite as caracteristicas da peca 2===%n");
+		peca2.codigo = lerIntSeguro(sc, "Numero de Identificacao: ");
 		peca2.quantidade = lerIntSeguro(sc,"Quantidade solicitada: ");
-		peca2.valorUnitario = lerDoubleSeguro(sc, "Valor Unitário da Peça: ");
+		peca2.valorUnitario = lerDoubleSeguro(sc, "Valor Unitario da Peca: ");
 		
 		} else {
 			peca2.quantidade = 0;
