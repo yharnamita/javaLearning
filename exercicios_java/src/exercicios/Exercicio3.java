@@ -45,7 +45,7 @@ public class Exercicio3{
 					}
 				}
 
-				//método try/catch para ler S ou N
+				//método para ler S ou N
 				static String lerSN (Scanner sc) {
 
 					while (true) {
