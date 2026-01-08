@@ -47,35 +47,74 @@ public class Exercicio7 {
 			}
 		}
 
-	
+	//metodo para fatoriais
 	static void fatorial(Scanner sc) {
 	
 	System.out.println("\n=== FATORIAL ===");
-	System.out.println("Um numero fatorado é ");
+	System.out.println("Um numero fatorado é um número que é decomposto para multiplicar seus fatores");
+	System.out.println("Exemplo: 4 = 4x3x2x1 = 24");
 	
 	int entrada = lerIntSeguro(sc,"\nDigite um número para fatorar: ");
-	int fat = 1;
 	
-	for (int i=1; i<=entrada; i++) {
-		fat = fat * i;
+	//na matematica, so se pode fatorar numeros positivos
+	if (entrada < 0) {
+		System.out.println("\n=== Não existe fatorial de número negativo ===");
+		return;
 	}
 	
-	System.out.println(fat);
+	int resultado = entrada;
+	
+	// O fatorial de 0 sempre sera 1
+	if (entrada == 0) {
+	    resultado = 1;
+	    System.out.printf("%nO fatorial de %d = %d%n", entrada, resultado);
+	    return;
+	}
+	
+	System.out.println("\nCalculo: ");
+	
+	for (int deco = entrada - 1; deco >= 1; deco--) {
+		System.out.println(resultado + " x " + deco + " = " + (resultado * deco));
+		resultado = resultado * deco;
+	}
+	
+	System.out.printf("%nResultado final: %d%n", resultado);
 	
 		}
 	
 	
 	static void divisores(Scanner sc) {
 		
-		int n = sc.nextInt();
 		
-		for (int i=1; i<=n; i++) {
-			if (n % i == 0) {
-				System.out.println(i);
+	//divisores de numeros positivos
+	System.out.println("\n=== DIVISORES ===");
+		
+	int numero;
+		
+	while(true){	
+		numero = lerIntSeguro(sc, "\nDigite um número positivo para calcular todos os seus divisores: ");
+		
+			if (numero < 0) {
+			System.out.println("\nVamos focar na positividade por hora, ok?");
+
+			} else {
+					break;
+			}
+	}
+	
+		if (numero == 0) {
+		    System.out.println("\nResultado indefinido");
+		    return;  
+		} 
+		
+		System.out.printf("%nOs divisores de %d são: %n", numero);
+		
+		for (int divid = 1; divid <= numero; divid++) {
+			if (numero % divid == 0) {
+				
+				System.out.println(divid);
 			}
 		}
-		}
-			
 	}
-
- 
+			
+}
