@@ -2,7 +2,6 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-
 public class Exercicio9{
 	
 	public static void main(String[] args) {
@@ -14,62 +13,9 @@ public class Exercicio9{
 		
 		infoFunc(sc);
 		
-		
 		sc.close();		
 	}
 
-	//=================================================================================
-	
-	//método try/catch para ler números double
-	static double lerDoubleSeguro(Scanner sc, String mensagem) {
-		while (true) {
-			System.out.print(mensagem);
-			try {
-				return sc.nextDouble();	
-			} catch (Exception e) {
-				System.out.println("===APENAS NÚMEROS===");
-				sc.next();
-			}
-		}
-	}
-	
-	//====================================================================================
-	
-	//metodo para evitar leitura vazia na string
-	static String evitarStringVazia(Scanner sc, String mensagem) {
-
-		String texto;
-		
-		do {
-			System.out.println(mensagem);
-			texto =  sc.nextLine().trim();
-			
-			if (texto.isEmpty()) {
-				System.out.println("=== DIGITE ALGUMA COISA ====");
-			}
-		} while (texto.isEmpty());
-		
-		return texto;
-	}
-	
-	//=====================================================================================
-	
-	//método para ler SN
-	static String lerSN (Scanner sc, String mensagem) {
-		
-		String resp;
-		do { 
-			System.out.println(mensagem);
-			resp = sc.next().toUpperCase();
-			
-			if (!resp.equals("S") && !resp.equals("N")) {
-	            System.out.println("Digite apenas S ou N");
-	        }
-			
-		} while (!resp.equals("S") && !resp.equals("N"));
-		return resp;
-	}
-			
 	//============================================================================================
 	
 			static void infoFunc(Scanner sc) {
@@ -84,22 +30,22 @@ public class Exercicio9{
 				
 				System.out.println("Empregado: " + clt);
 				
-				String desejaAbono = lerSN(sc, "\nDeseja uma porcentagem de abono?: (S/N)");
+				String desejaAbono = Utility.lerSN(sc, "\nDeseja uma porcentagem de abono?: (S/N)");
 			
 					if (desejaAbono.equals("S")) {
-						double porcentagem = lerDoubleSeguro(sc, "Qual a porcentagem do abono?: ");
+						double porcentagem = Utility.lerDoubleSeguro(sc, "Qual a porcentagem do abono?: ");
 						clt.abono(porcentagem);
+						
+						System.out.println("Resumo pós abono: ");
+						System.out.println("Empregado: " + clt);
+						
 					}else {
-						System.out.println("\nObrigado, Encerramos por aqui");
-					return;
-			}
+						System.out.println("\nSem abono aplicado");
 			
-				System.out.println("Empregado: " + clt);
+			}
 				
-				System.out.println("\nDeseja Cadastrar outro empregado? (S/N)");
-				resp = sc.next().toUpperCase();
-				sc.nextLine();
-				
+				resp = Utility.lerSN(sc, "\nDeseja cadastrar outro empregado? (S/N)");
+					
 			} while (resp.equals("S"));
 	
 				System.out.println("\n=== ENCERRAMOS AQUI, TENHA UM BOM DIA ===\n");
@@ -115,11 +61,10 @@ public class Exercicio9{
 				double roubo;
 				
 				void lerDados(Scanner sc) {
-					
 		
-					nome = Exercicio9.evitarStringVazia(sc, "Qual o nome do empregado?: " );
-					salario = Exercicio9.lerDoubleSeguro(sc, "Qual o salario bruto do empregado?: \n");
-					roubo = Exercicio9.lerDoubleSeguro(sc, "Quanto é descontado do imposto?: \n");
+					nome = Utility.evitarStringVazia(sc, "Qual o nome do empregado?: " );
+					salario = Utility.lerDoubleSeguro(sc, "Qual o salario bruto do empregado?: \n");
+					roubo = Utility.lerDoubleSeguro(sc, "Quanto é descontado do imposto?: \n");
 				}
 				
 				double liquidez() {
@@ -132,5 +77,94 @@ public class Exercicio9{
 				public String toString() {
 					return nome + ", Salário Liquido: $ " + String.format("%.2f", liquidez());
 				}
+			}
+
+			
+		//=====================================================================================================	
+			
+			static class Utility{
+				
+				//método try/catch para ler números int
+				static int lerIntSeguro(Scanner sc, String mensagem) {
+					while (true) {
+						System.out.print(mensagem);
+						try {
+							return sc.nextInt();	
+						} catch (Exception e) {
+							System.out.println("===APENAS NÚMEROS===");
+							sc.next();
+						}
+					}
+				}
+				
+				//método try/catch para ler números float
+				static float lerFloatSeguro(Scanner sc, String mensagem) {
+					while (true) {
+						System.out.print(mensagem);
+						try {
+							return sc.nextFloat();	
+						} catch (Exception e) {
+							System.out.println("===APENAS NÚMEROS===");
+							sc.next();
+						}
+					}
+				}
+				
+				//método try/catch para ler números double
+				static double lerDoubleSeguro(Scanner sc, String mensagem) {
+					while (true) {
+						System.out.print(mensagem);
+						try {
+							return sc.nextDouble();	
+						} catch (Exception e) {
+							System.out.println("===APENAS NÚMEROS===");
+							sc.next();
+						}
+					}
+				}
+				
+				
+				//metodo para evitar leitura vazia na string
+				static String evitarStringVazia(Scanner sc, String mensagem) {
+
+					String texto;
+					
+					do {
+						System.out.println(mensagem);
+						texto =  sc.nextLine().trim();
+						
+						if (texto.isEmpty()) {
+							System.out.println("=== DIGITE ALGUMA COISA ====");
+						}
+					} while (texto.isEmpty());
+					
+					return texto;
+				}
+				
+				
+				//método para ler SN
+				static String lerSN (Scanner sc, String mensagem) {
+					
+					System.out.println(mensagem);
+					
+					while (true) {
+						
+						String resp = sc.nextLine().trim().toUpperCase();
+						
+						if (resp.isEmpty()) {
+				            continue;
+						}
+								
+						char c = resp. charAt(0);
+						
+						if (c == 'S' || c == 'N') {
+				            return String.valueOf(c);
+						
+					        }
+						
+						 System.out.println("Digite apenas S ou N");
+				} 
+			}
+				
 			}
 }
