@@ -5,7 +5,7 @@ import java.util.Scanner;
 //Esse exercicio gera um menu onde o usuario pode cadastrar uma senha de acesso e testar se ela funcionou
 
 
-public class Exercicio4{
+public class Exercicio04{
 
 	static Integer senha = null; //variavel senha
 	

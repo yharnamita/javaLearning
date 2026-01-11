@@ -2,10 +2,11 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-//esse exercicio traz um menu com duas operacoes, a primeira é a identificacao do quadrante no plano cartesiano
-//e a segunda é uma enquete
+/*esse exercicio traz um menu com duas operacoes, a primeira é a identificacao do quadrante no plano cartesiano
+e a segunda é uma enquete
+*/
 
-public class Exercicio5 {
+public class Exercicio05 {
 	public static void main(String[] args) {
 	Locale.setDefault(Locale.US);
 	Scanner sc = new Scanner(System.in);

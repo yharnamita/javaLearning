@@ -2,8 +2,7 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-
-public class Exercicio8{
+public class Exercicio08{
 	
 	public static void main(String[] args) {
 		
@@ -55,9 +54,7 @@ public class Exercicio8{
 	//============================================================================================
 	
 			static void calcRetangulo(Scanner sc) {
-				
-		
-				
+					
 			do {
 			
 				Retangulo r = new Retangulo(); 
@@ -84,8 +81,10 @@ public class Exercicio8{
 				double altura;
 				
 				void lerDados(Scanner sc) {
-					base = Exercicio8.lerDoubleSeguro(sc, "Valor da base: ");
-					altura = Exercicio8.lerDoubleSeguro(sc, "Valor da altura: ");
+
+						base = lerPositivo(sc, "Valor da base: ");
+						altura = lerPositivo(sc, "Valor da altura: ");
+
 				}
 				
 				double area() {
@@ -97,6 +96,17 @@ public class Exercicio8{
 				}
 				double diagonal() {
 					return Math.sqrt(base * base + altura * altura);
+				}
+				
+				double lerPositivo (Scanner sc, String mensagem) {
+					double valor;
+					do {
+						valor = lerDoubleSeguro(sc, mensagem);
+						if(valor < 0) {
+							System.out.println("=== O VALOR NÃO PODE SER NEGATIVO ===");
+						}
+					} while (valor < 0);
+					return valor;
 				}
 			}
 			

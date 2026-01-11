@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Exercicio3{
+public class Exercicio03{
 
 	public static void main(String[] args) {
 		
@@ -115,9 +115,9 @@ public class Exercicio3{
 	double valorUnitario;
 	
 	void lerDados(Scanner sc) {
-		codigo = Exercicio3.lerIntSeguro(sc, "Numero de Identificação: ");
-		quantidade = Exercicio3.lerIntSeguro(sc, "Quantidade da peça: ");
-		valorUnitario = Exercicio3.lerDoubleSeguro(sc, "Valor unitário: ");
+		codigo = Exercicio03.lerIntSeguro(sc, "Numero de Identificação: ");
+		quantidade = Exercicio03.lerIntSeguro(sc, "Quantidade da peça: ");
+		valorUnitario = Exercicio03.lerDoubleSeguro(sc, "Valor unitário: ");
 	}
 	
 	void mostrarResumo() {

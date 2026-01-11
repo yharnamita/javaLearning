@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 //exercicios com for, uma opeção para encontrar numeros impares e outra para numeros pares
 
-public class Exercicio6{
+public class Exercicio06{
 	
 	public static void main(String[] args) {
 		

@@ -2,7 +2,7 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Exercicio9{
+public class Exercicio09{
 	
 	public static void main(String[] args) {
 		
@@ -41,10 +41,10 @@ public class Exercicio9{
 						
 					}else {
 						System.out.println("\nSem abono aplicado");
-			
+						System.out.println("Empregado: " + clt);
 			}
 				
-				resp = Utility.lerSN(sc, "\nDeseja cadastrar outro empregado? (S/N)\n");
+				resp = Utility.lerSN(sc, "\nDeseja consultar outro empregado? (S/N)\n");
 					
 			} while (resp.equals("S"));
 	
@@ -62,10 +62,9 @@ public class Exercicio9{
 				
 				void lerDados(Scanner sc) {
 					
-		
-					nome = Utility.evitarLinhaVazia(sc, "Qual o nome do empregado?: \n" );
-					salario = Utility.lerDoubleSeguro(sc, "Qual o salario bruto do empregado?: \n");
-					roubo = Utility.lerDoubleSeguro(sc, "Quanto é descontado do imposto?: \n");
+					nome = Utility.lerNome(sc, "Qual o nome do empregado?: \n" );
+					salario = Utility.lerDoublePositivo(sc, "Qual o salario bruto do empregado?: \n", 800.0, Double.MAX_VALUE); //meio salario 2026
+					roubo = Utility.lerDoublePositivo(sc, "Quanto é descontado do imposto?: \n", 0.0, Double.MAX_VALUE);
 				}
 				
 				double liquidez() {
@@ -124,6 +123,38 @@ public class Exercicio9{
 					}
 				}
 				
+				//metodo para definição de valor minimo e maximo em doubles
+				static double lerDoublePositivo(Scanner sc, String mensagem, double min, double max) {
+					while(true) {
+						double valor = lerDoubleSeguro(sc, mensagem);
+						
+						if (valor < min || valor > max) {
+							
+							if(max == Double.MAX_VALUE) {
+							System.out.printf("=== O VALOR DEVE SER MAIOR OU IGUAL A: %.2f ===%n", min);	
+							
+							} else {
+							System.out.printf("=== O VALOR DEVE ESTAR ENTRE %.2f E %.2f ===%n", min, max);
+							}
+							
+						} else {
+							return valor;
+						}
+					}
+				}
+				
+				//metodo para impedir numero e especiais no nome
+				static String lerNome(Scanner sc, String mensagem) {
+					while (true) {
+						String nome = evitarLinhaVazia(sc, mensagem);
+						
+						//regex
+						if(nome.matches("[A-Za-zÀ-ÿ ']+")) {
+							return nome;
+						}
+						System.out.println("===O NOME NÃO PODE CONTER NUMEROS OU SIMBOLOS");
+					}
+				}
 				
 				//metodo para evitar leitura vazia na string
 				static String evitarLinhaVazia(Scanner sc, String mensagem) {

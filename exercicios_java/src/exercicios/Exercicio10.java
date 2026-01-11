@@ -60,7 +60,7 @@ public class Exercicio10{
 				
 				void lerDados(Scanner sc) {
 					
-					nome = Utility.evitarLinhaVazia(sc, "Qual o nome do aluno?: \n" );
+					nome = Utility.lerNome(sc, "Qual o nome do aluno?: \n" );
 					nota1 = lerNota(sc, "Qual a nota do primeiro trimestre dele: \n");
 					nota2 = lerNota(sc, "Qual a nota do segundo trimestre dele: \n");
 					nota3 = lerNota(sc, "Qual a nota do terceiro trimestre dele: \n");
@@ -135,6 +135,18 @@ public class Exercicio10{
 					}
 				}
 				
+				//metodo para impedir numero e especiais no nome
+				static String lerNome(Scanner sc, String mensagem) {
+					while (true) {
+						String nome = evitarLinhaVazia(sc, mensagem);
+						
+						//regex
+						if(nome.matches("[A-Za-zÀ-ÿ ']+")) {
+							return nome;
+						}
+						System.out.println("===O NOME NÃO PODE CONTER NUMEROS OU SIMBOLOS");
+					}
+				}
 				
 				//metodo para evitar leitura vazia na string
 				static String evitarLinhaVazia(Scanner sc, String mensagem) {
