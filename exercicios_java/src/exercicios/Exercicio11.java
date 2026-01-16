@@ -2,6 +2,14 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
+/*
+ * Aqui temos um exercicio para verificar a conversao de dolar para real
+ * utilizando uma classe conversao com atributos double para valor do dolar, quantidade
+ * de compra e uma que recebe o valor em reais ja com a adição do IOF cujo está setado para 6% do valor
+ * 
+ */
+
+
 public class Exercicio11{
 	
 	public static void main(String[] args) {
@@ -11,20 +19,20 @@ public class Exercicio11{
 		
 		System.out.println("=== COMPRAR DOLLAR (+IOF) ===");
 		
-		calcConverse(sc);
+		loopConversor(sc);
 		
 		sc.close();		
 	}
 
 	//============================================================================================
 	
-			static void calcConverse(Scanner sc) {
+			static void loopConversor(Scanner sc) {
 				
 				String resp;
 				
 			do {
 			
-				ConversorDollar conversao = new ConversorDollar();
+				ConversaoDollar conversao = new ConversaoDollar();
 
 				conversao.lerDados(sc);
 				conversao.calculoIOF(6);
@@ -41,7 +49,7 @@ public class Exercicio11{
 			
 		//==================================================================================================	
 			
-			static class ConversorDollar {
+			static class ConversaoDollar {
 				
 				double dolar;
 				double compra;
