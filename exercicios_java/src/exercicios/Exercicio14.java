@@ -3,6 +3,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 //Mais exercicio com vetor
+//COM SOMA E MEDIA
 
 public class Exercicio14 {
 

@@ -1,45 +1,115 @@
 package exercicios;
-
 import java.util.Locale;
 import java.util.Scanner;
 
-//SOMA DE DOIS VETORES
+//nao entendi pq esse exercicio pediu so a media das mulheres mas ok
 
-public class Exercicio16 {
-
-	public static void main(String[] args) {
-
-		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in);
-
-		int n = Utility.lerIntervaloInt(sc, "Quantos valores vai ter cada vetor? ", 1, Integer.MAX_VALUE);
-
-		int[] vetorA = new int[n];
-		int[] vetorB = new int[n];
-		int[] vetorC = new int[n];
-
-		System.out.println("Digite os valores do vetor A:");
+public class Exercicio18{
+	
+	public static void main(String[] args){
+		
+	Locale.setDefault(Locale.US);	
+	Scanner sc = new Scanner (System.in);
+		
+		int n = Utility.lerIntervaloInt(sc, "Quantas pessoas serão verificadas?: ", 1, Integer.MAX_VALUE);
+		
+		Pessoa[] pessoas = new Pessoa[n];
+		
 		for (int i = 0; i < n; i++) {
-			vetorA[i] = Utility.lerIntSeguro(sc, "");
+
+		    System.out.println("Dados da " + (i + 1) + "a pessoa:");
+
+		    double altura = Utility.lerIntervaloDouble(sc, "Altura: ", 0.5, 3.0);
+
+		    char genero;
+
+		    while (true) {
+		        String g = Utility.evitarLinhaVazia(sc, "Genero (M/F): ").toUpperCase();
+		        genero = g.charAt(0);
+
+		        if (genero == 'M' || genero == 'F') {
+		            break;
+		        }
+
+		        System.out.println("=== Digite APENAS M OU F ===");
+		    }
+
+		    pessoas[i] = new Pessoa(altura, genero);
 		}
 
-		System.out.println("Digite os valores do vetor B:");
-		for (int i = 0; i < n; i++) {
-			vetorB[i] = Utility.lerIntSeguro(sc, "");
-		}
+		
+		double menorAltura = pessoas[0].getAltura();
+        double maiorAltura = pessoas[0].getAltura();
 
-		// soma dos vetores A e B gerando C
-		for (int i = 0; i < n; i++) {
-			vetorC[i] = vetorA[i] + vetorB[i];
-		}
+        double somaAlturaMulheres = 0.0;
+        int qtdMulheres = 0;
+        int qtdHomens = 0;
 
-		System.out.println("VETOR RESULTANTE:");
-		for (int i = 0; i < n; i++) {
-			System.out.println(vetorC[i]);
-		}
+        for (Pessoa p : pessoas) {
 
-		sc.close();
+            if (p.getAltura() < menorAltura) {
+                menorAltura = p.getAltura();
+            }
+
+            if (p.getAltura() > maiorAltura) {
+                maiorAltura = p.getAltura();
+            }
+
+            if (p.isMulher()) {
+                somaAlturaMulheres += p.getAltura();
+                qtdMulheres++;
+            }
+
+            if (p.isHomem()) {
+                qtdHomens++;
+            }
+        }
+
+        double mediaMulheres = somaAlturaMulheres / qtdMulheres;
+
+        System.out.printf("Menor altura = %.2f%n", menorAltura);
+        System.out.printf("Maior altura = %.2f%n", maiorAltura);
+        System.out.printf("Media das alturas das mulheres = %.2f%n", mediaMulheres);
+        System.out.println("Numero de homens = " + qtdHomens);
+
+        sc.close();
+		
 	}
+	
+static class Pessoa {
+		private double altura;
+		private char genero;
+		
+		 public Pessoa(double altura, char genero) {
+			 
+			 genero = Character.toUpperCase(genero);
+			 
+			 if (genero != 'M' && genero != 'F') {
+				 throw new IllegalArgumentException("=== ENTRADA INVALIDA ===");
+			 }
+			 
+		        this.altura = altura;
+		        this.genero = genero;
+		    }
+
+		public double getAltura() {
+			return altura;
+		}
+
+		public char getGenero() {
+			return genero;
+		}
+		
+		public boolean isMulher() {
+	        return genero == 'F';
+	    }
+
+	    public boolean isHomem() {
+	        return genero == 'M';
+	    }
+		
+		}
+	
 	
 static class Utility {
     	
@@ -76,7 +146,7 @@ static class Utility {
     		}
     	
     		
-    		// método para ler SN
+    		// método para ler Sim ou Nao
     		static String lerSN(Scanner sc, String mensagem) {
 
     			while (true) {
@@ -183,5 +253,6 @@ static class Utility {
     	}
 
     }
+	
 	
 }

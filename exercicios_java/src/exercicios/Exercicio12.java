@@ -2,8 +2,8 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-//EXERCICIO COM GETTERS E SETTERS
-
+//EXERCICIO COM GETTERS E SETTERS 
+//SISTEMA BANCO
 //aprendi a usar ctrl + shift + F :D
 
 public class Exercicio12 {

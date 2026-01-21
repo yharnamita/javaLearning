@@ -2,6 +2,8 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
+//MEDIA DE NOTA DE ALUNOS COM VETORES
+
 public class Exercicio17 {
 
     public static void main(String[] args) {
