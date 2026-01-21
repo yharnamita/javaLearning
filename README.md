@@ -19,4 +19,4 @@ os outros códigos eu postei à medida que progredia nos meus estudos.
 Observe também que, para este desafio, quero que cada arquivo seja executado de forma independente, portanto, não se surpreenda com a repetição de elementos como a classe Utility ou com as classes não estando em arquivos separados.
 
 Como sou iniciante, tive algumas dificuldades para entender a plataforma, então o dia 3 não aparece no meu perfil, mesmo eu tendo enviado algum código. 
-Isso aconteceu porque eu não alterei o usuário do meu computador, e aparece como se outra pessoa tivesse enviado o código. :(
+Isso aconteceu porque eu não alterei o usuário do meu computador, e aparece como se outra pessoa tivesse enviado o código.
