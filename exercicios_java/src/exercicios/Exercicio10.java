@@ -2,6 +2,8 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
+//CONSULTA DE MEDIA DE NOTAS DE ALUNO
+
 public class Exercicio10{
 	
 	public static void main(String[] args) {

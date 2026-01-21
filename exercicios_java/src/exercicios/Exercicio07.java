@@ -2,6 +2,8 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
+//VERIDICACAO DE FATORIAL DE UM NUMERO E OS SEUS DIVISORES
+
 public class Exercicio07 {
 	public static void main(String[] args) {
 	Locale.setDefault(Locale.US);

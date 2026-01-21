@@ -2,6 +2,8 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
+//EXERCICIO PARA CALCULAR AREA, PERIMETRO E DIAGONAL DE RETANGULOS
+
 public class Exercicio08{
 	
 	public static void main(String[] args) {

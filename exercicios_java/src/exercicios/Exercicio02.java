@@ -3,6 +3,8 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
+//COMPILADO DE EXERCICIOS COM OPERACOES BASICAS DE LOGICA DE PROGRAMACAO
+
 public class Exercicio02 {
 	public static void main(String[] args) {
 	Locale.setDefault(Locale.US);

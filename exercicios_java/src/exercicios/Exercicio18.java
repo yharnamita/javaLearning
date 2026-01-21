@@ -2,6 +2,8 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
+//EXERCICIO PARA COMPARACAO DE ALTURA ENTRE HOMENS E MULHERES
+
 //nao entendi pq esse exercicio pediu so a media das mulheres mas ok
 
 public class Exercicio18{

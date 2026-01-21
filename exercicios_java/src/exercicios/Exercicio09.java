@@ -2,6 +2,8 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
+//FICHA SALARIAL DE FUNCIONARIO
+
 public class Exercicio09{
 	
 	public static void main(String[] args) {
