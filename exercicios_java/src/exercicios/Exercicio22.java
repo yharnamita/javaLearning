@@ -1,8 +1,11 @@
 package exercicios;
-
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
+
+/*
+ * EXERCICIO COM LISTAS PARA CADASTRAR PRODUTOS E CONSULTAR PRODUTOS
+ */
 
 public class Exercicio22 {
 

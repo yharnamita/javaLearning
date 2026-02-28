@@ -1,7 +1,10 @@
 package exercicios;
-
 import java.util.Random;
 import java.util.Scanner;
+
+/*
+ * EXERCICIOS COM RANDOM E MATRIZES PARA JOGO DA MEMÓRIA
+ */
 
 public class Exercicio31 {
 

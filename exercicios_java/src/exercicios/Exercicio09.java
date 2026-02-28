@@ -2,7 +2,11 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-//FICHA SALARIAL DE FUNCIONARIO
+/*
+ * FICHA SALARIAL DE FUNCIONARIO
+ * NOME, SALARIO BRUTO, IMPOSTO E POSSIBILIDADE DE ADCIONAR ABONO
+ * DO WHILE
+ */
 
 public class Exercicio09{
 	

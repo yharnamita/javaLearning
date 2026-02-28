@@ -2,7 +2,7 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-//EXERCICIO COM VETORES PARA ACHAR NUMEROS NEGATIVOS
+//EXERCICIO COM VETORES PARA ACHAR NUMEROS NEGATIVOS EM UM VETOR
 
 public class Exercicio13 {
 

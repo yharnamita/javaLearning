@@ -2,7 +2,10 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-//VERIDICACAO DE FATORIAL DE UM NUMERO E OS SEUS DIVISORES
+/*
+ * VERIFICACAO DE FATORIAL DE UM NUMERO
+ * VERIFICAÇÃO DOS DIVISORES DE UM NUMERO
+ */
 
 public class Exercicio07 {
 	public static void main(String[] args) {

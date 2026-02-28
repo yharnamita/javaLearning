@@ -1,7 +1,10 @@
 package exercicios;
-
 import java.util.Scanner;
 import java.util.Locale;
+
+/*
+ * OUTRO EXERCICIO COM VETORES, ESSE MOSTRA A MÉDIA DE ALTURAS E AS PESSOAS MENORES DE 16 ANOS
+ */
 
 public class Exercicio20 {
 
@@ -28,10 +31,9 @@ public class Exercicio20 {
 		}
 
 		double media = mediaAlturas(pessoas);
-		
 		double porcentagem = calcularMenores16(pessoas);
 		
-		
+
 		System.out.printf("\nAltura media: %.2f%n", media);
 		System.out.printf("Pessoas com menos de 16 anos: %.1f%%%n", porcentagem);
 		

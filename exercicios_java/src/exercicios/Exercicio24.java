@@ -1,6 +1,9 @@
 package exercicios;
-
 import java.util.Scanner;
+
+/*
+ * EXERCICIO COM MATRIZES PARA CONTAR OS NUMEROS NEGATIVOS
+ */
 
 public class Exercicio24 {
 

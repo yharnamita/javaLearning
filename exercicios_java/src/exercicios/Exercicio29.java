@@ -3,7 +3,11 @@ package exercicios;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Exercicio29{
+/*
+ * EXERCICIO COM MATRIZES PARA JOGO DE BATALHA NAVAL
+ */
+
+public class Exercicio29 {
 
 	public static void main(String[] args) {
 

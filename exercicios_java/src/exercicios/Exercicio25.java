@@ -1,6 +1,9 @@
 package exercicios;
-
 import java.util.Scanner;
+
+/*
+ * EXERCICIO COM MATRIZES ENCONTRAR TODAS AS POSIÇÕES DE UM NUMERO EM UMA MATRIZ, ALEM DE MOSTRAR SEUS VIZINHOS
+ */
 
 public class Exercicio25 {
 
@@ -65,22 +68,22 @@ public class Exercicio25 {
 
 						System.out.println("\nPosicao " + i + "," + j + ":");
 
-						// Esquerda
+						//Numero daEsquerda
 						if (j > 0) {
 							System.out.println("Esquerda: " + dados[i][j - 1]);
 						}
 
-						// Cima
+						//Numero de Cima
 						if (i > 0) {
 							System.out.println("Acima: " + dados[i - 1][j]);
 						}
 
-						// Direita
+						//Numero da Direita
 						if (j < colunas - 1) {
 							System.out.println("Direita: " + dados[i][j + 1]);
 						}
 
-						// Baixo
+						//Numero de Baixo
 						if (i < linhas - 1) {
 							System.out.println("Abaixo: " + dados[i + 1][j]);
 						}

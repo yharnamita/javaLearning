@@ -1,9 +1,12 @@
 package exercicios;
-
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Locale;
+
+/*
+ * Exercicio com lista para cadastrar funcionários
+ */
 
 public class Exercicio23 {
 

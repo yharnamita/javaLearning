@@ -1,6 +1,9 @@
 package exercicios;
-
 import java.util.Scanner;
+
+/*
+ * CALCULO DA MEDIA DE ALUNOS COM MATRIZES
+ */
 
 public class Exercicio26 {
 

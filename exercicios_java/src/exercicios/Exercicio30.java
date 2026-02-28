@@ -1,6 +1,9 @@
 package exercicios;
-
 import java.util.Scanner;
+
+/*
+ * EXERCICIOS COM MATRIZES PARA JOGO DE LABIRINTITE :D COM WASD (É DIFICIL LEAGUE OF LEGENDS???)
+ */
 
 public class Exercicio30 {
 

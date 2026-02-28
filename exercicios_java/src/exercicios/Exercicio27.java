@@ -1,6 +1,9 @@
 package exercicios;
-
 import java.util.Scanner;
+
+/*
+ * EXERCICIO COM MATRIZ PARA JOGO DA VELHA
+ */
 
 public class Exercicio27 {
 
@@ -110,7 +113,7 @@ public class Exercicio27 {
 				}
 			}
 
-			// Colunas
+			//Colunas
 			for (int j2 = 0; j2 < 3; j2++) {
 
 				if (tabuleiro[0][j2] == j && tabuleiro[1][j2] == j && tabuleiro[2][j2] == j) {
@@ -119,13 +122,13 @@ public class Exercicio27 {
 				}
 			}
 
-			// Diagonal principal
+			//Diagonal principal
 			if (tabuleiro[0][0] == j && tabuleiro[1][1] == j && tabuleiro[2][2] == j) {
 
 				return true;
 			}
 
-			// Diagonal secundaria
+			//Diagonal secundaria
 			if (tabuleiro[0][2] == j && tabuleiro[1][1] == j && tabuleiro[2][0] == j) {
 
 				return true;

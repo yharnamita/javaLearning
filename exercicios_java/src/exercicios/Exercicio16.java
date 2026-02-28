@@ -3,7 +3,10 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-//SOMA DE DOIS VETORES
+/*
+ * SOMA DE DOIS VETORES
+ * GERA UM TERCEIRO VETOR COM A SOMA DOS ELEMENTOS DOS DOIS VETORES
+ */
 
 public class Exercicio16 {
 

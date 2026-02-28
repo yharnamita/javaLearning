@@ -3,7 +3,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 //Mais exercicio com vetor
-//COM SOMA E MEDIA
+//COM A SOMA E MEDIA DOS ELEMENTOS DO VETOR
 
 public class Exercicio14 {
 

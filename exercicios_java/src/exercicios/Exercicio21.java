@@ -2,6 +2,10 @@ package exercicios;
 import java.util.Scanner;
 import java.util.Locale;
 
+/*
+ * EXERCICIO COM VETORES SIMULANDO A LOCAÇÃO DE QUARTOS EM UMA POUSADA
+ */
+
 public class Exercicio21{
 	public static void main(String[]args) {	
 		
@@ -17,7 +21,6 @@ public class Exercicio21{
 			System.out.println("\nAluguel #" + (i) + ":");
 			
 			String nome = Utility.lerNome(sc, "Nome: ");
-			
 			String email = Utility.evitarLinhaVazia(sc, "Email: ");
 			
 			int quarto = lerQuarto(sc, quartos);

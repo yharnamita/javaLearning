@@ -2,7 +2,10 @@ package exercicios;
 
 import java.util.Scanner;
 
-//EXERCICIO COM THREADS
+/*
+ * EXERCICIO COM THREADS
+ * DUAS FRASES ALTERNADAS ATÉ O USUARIO QUERER PARAR
+ */
 
 public class Exercicio19 {
 

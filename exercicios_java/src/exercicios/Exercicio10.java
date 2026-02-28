@@ -2,7 +2,10 @@ package exercicios;
 import java.util.Locale;
 import java.util.Scanner;
 
-//CONSULTA DE MEDIA DE NOTAS DE ALUNO
+/*
+ * CONSULTA DE MEDIA DE NOTAS DE ALUNO
+ * ADCIONA 3 NOTAS E FAZ A MÉDIA PARA UM OU MAIS ALUNOS
+ */
 
 public class Exercicio10{
 	
